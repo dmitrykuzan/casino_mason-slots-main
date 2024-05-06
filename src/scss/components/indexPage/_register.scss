@@ -1,0 +1,122 @@
+.register {
+  padding-top: 14rem;
+  padding-bottom: 14rem;
+
+  @media (max-width: em(992)) {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  @media (max-width: em(768)) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  &__title {
+    padding-bottom: 2.5rem;
+    word-break: break-word;
+  }
+
+  &__subtitle {
+    padding-bottom: 7.8rem;
+    max-width: 57rem;
+
+    @media (max-width: em(768)) {
+      padding-bottom: 4rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 6rem;
+    padding-left: 19.5rem;
+    min-height: 17rem;
+    max-width: 77rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      z-index: -1;
+      border-radius: 0.8rem;
+      width: 17rem;
+      height: 17rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: var(--clr-primary-700);
+      transform: translateY(-50%);
+
+      @media (max-width: em(575)) {
+        width: 7rem;
+        height: 7rem;
+        background-size: 5rem 50rem;
+      }
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+      padding-left: 8.5rem;
+      min-height: 12rem;
+    }
+
+    &--up {
+      &::before {
+        background-image: url(../img/register/up.svg);
+      }
+    }
+
+    &--deposit {
+      &::before {
+        background-image: url(../img/register/deposit.svg);
+      }
+    }
+
+    &--play {
+      &::before {
+        background-image: url(../img/register/play.svg);
+      }
+    }
+
+    &--get {
+      &::before {
+        background-image: url(../img/register/get.svg);
+      }
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        position: absolute;
+        left: 7.5rem;
+        bottom: -4.5rem;
+        width: 2.6rem;
+        height: 3.6rem;
+        background-image: url(../img/register/arrow.svg);
+        background-repeat: no-repeat;
+
+        @media (max-width: em(575)) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__item-title {
+    padding-bottom: 1.2rem;
+    font-weight: 700;
+    font-size: fluid-font(3.5rem, 1.8rem);
+  }
+
+  &__item-subtitle {
+    line-height: 145%;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,41 @@
+.app {
+  padding-top: 14rem;
+
+  @media (max-width: em(992)) {
+    padding-top: 10rem;
+  }
+
+  @media (max-width: em(768)) {
+    padding-top: 3rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: em(1140)) {
+      display: block;
+    }
+  }
+
+  &__content {
+    margin-right: 3rem;
+    max-width: 57rem;
+
+    @media (max-width: em(1200)) {
+      margin-right: 0;
+      max-width: initial;
+    }
+  }
+
+  &__title {
+    padding-bottom: 2.5rem;
+  }
+
+  &__img {
+    @media (max-width: em(1200)) {
+      display: none;
+    }
+  }
+}

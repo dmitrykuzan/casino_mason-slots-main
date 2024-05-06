@@ -1,0 +1,144 @@
+.benefits {
+  padding-top: 14rem;
+  padding-bottom: 14rem;
+  background-color: var(--clr-default-100);
+
+  @media (max-width: em(992)) {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  @media (max-width: em(768)) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  &__title-wrapper {
+    padding-bottom: 2.4rem;
+    font-size: fluid-font(6rem, 4rem);
+    line-height: 125%;
+    color: var(--clr-default-800);
+  }
+
+  &__description {
+    margin-left: auto;
+    padding-bottom: 6rem;
+    max-width: 56rem;
+    line-height: 145%;
+    color: rgba(0, 0, 0, 0.9);
+
+    @media (max-width: em(576)) {
+      padding-bottom: 4rem;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-column-gap: 3rem;
+    grid-template-columns: 65% 31%;
+
+    @media (max-width: em(768)) {
+      display: block;
+    }
+  }
+
+  &__item-wrap {
+    position: relative;
+    padding-top: 23rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 1.6rem;
+      width: 100%;
+      height: 23.3rem;
+      background-position: center;
+      background-size: 12.5rem 12.5rem;
+      background-repeat: no-repeat;
+      background-color: var(--clr-primary-700);
+    }
+  }
+
+  &__item {
+    margin-top: 3.2rem;
+    color: var(--clr-default-900);
+
+    &--pros {
+      &::before {
+        background-image: url(../img/mobile/pros-smile.svg);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: -20.8rem;
+        top: -12.6rem;
+        width: 34.6rem;
+        height: 34.5rem;
+        background-image: url(../img/mobile/card.png);
+      }
+
+      @media (max-width: em(1570)) {
+        &::after {
+          left: -11rem;
+        }
+      }
+
+      @media (max-width: em(992)) {
+        &::after {
+          display: none;
+        }
+      }
+
+      @media (max-width: em(768)) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &--cons {
+      &::before {
+        background-image: url(../img/mobile/cons-smile.svg);
+      }
+    }
+  }
+
+  &__list {
+    position: relative;
+    padding-left: 3.6rem;
+    font-weight: 500;
+    font-size: fluid-font(2rem, 1.6rem);
+    line-height: 120%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 50%;
+      width: 2.4rem;
+      height: 2.4rem;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &--pros {
+      &::before {
+        background-image: url(../img/mobile/pros.svg);
+        background-color: var(--clr-primary-600);
+      }
+    }
+
+    &--cons {
+      &::before {
+        background-image: url(../img/mobile/cons.svg);
+        background-color: #666;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}

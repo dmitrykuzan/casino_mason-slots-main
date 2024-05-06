@@ -1,0 +1,29 @@
+.conclusion {
+  padding-top: 14rem;
+
+  @media (max-width: em(992)) {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  @media (max-width: em(768)) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  &__title {
+    padding-bottom: 2.5rem;
+  }
+
+  &__text {
+    padding-bottom: 6rem;
+
+    p:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: em(768)) {
+      padding-bottom: 4rem;
+    }
+  }
+}

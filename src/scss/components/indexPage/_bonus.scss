@@ -1,0 +1,124 @@
+.bonus {
+  position: relative;
+  padding-top: 6.5rem;
+
+  @media (max-width: em(1200)) {
+    padding-top: 10rem;
+  }
+
+  @media (max-width: em(768)) {
+    padding-top: 3rem;
+  }
+
+  &__title {
+    padding-bottom: 2rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 5rem;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: -25rem;
+      top: 8rem;
+      width: 18.4rem;
+      height: 17.4rem;
+      background-image: url(../img/bonus/chip-left.svg);
+      background-repeat: no-repeat;
+      filter: blur(3px);
+    }
+
+    @media (max-width: em(1200)) {
+      margin-left: 0;
+
+      &::after, &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__items {
+    position: relative;
+    display: grid;
+    grid-gap: 3rem 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 76rem;
+    padding-bottom: 4.5rem;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+    }
+
+    &::before {
+      right: -40.8rem;
+      bottom: 0;
+      width: 27.6rem;
+      height: 35.9rem;
+      background-image: url(../img/bonus/chips.svg);
+      background-size: 27.6rem 35.9rem;
+
+      @media (max-width: em(1200)) {
+        display: none;
+      }
+    }
+
+    &::after {
+      right: -36rem;
+      top: 8rem;
+      width: 13rem;
+      height: 12rem;
+      background-image: url(../img/bonus/chip-right.svg);
+      filter: blur(2px);
+    }
+
+    @media (max-width: em(1200)) {
+      max-width: initial;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: em(768)) {
+      display: block;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      @media (max-width: em(768)) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__item-title {
+    padding-bottom: 0.8rem;
+    font-weight: 700;
+    font-size: fluid-font(2.4rem, 1.8rem);
+    color: var(--clr-primary-400);
+  }
+
+  &__item-subtitle {
+    line-height: 145%;
+  }
+
+  &__link-wrap {
+    margin-top: auto;
+  }
+
+  &__table {
+    margin-top: 0;
+
+    @media (max-width: em(575)) {
+      margin-top: 0;
+    }
+  }
+}

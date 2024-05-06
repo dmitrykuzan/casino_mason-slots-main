@@ -1,0 +1,27 @@
+.vip {
+  padding-top: 14rem;
+
+  @media (max-width: em(992)) {
+    padding-top: 10rem;
+  }
+
+  @media (max-width: em(768)) {
+    padding-top: 3rem;
+  }
+
+  &__title {
+    padding-bottom: 2.5rem;
+  }
+
+  &__wrapper p {
+    font-weight: initial;
+  }
+
+  &__item p {
+    font-weight: 500;
+  }
+
+  &__item--head p {
+    font-weight: 500;
+  }
+}

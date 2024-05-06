@@ -1,0 +1,32 @@
+.license {
+  padding-top: 14rem;
+
+  @media (max-width: em(992)) {
+    padding-top: 10rem;
+  }
+
+  @media (max-width: em(768)) {
+    padding-top: 3rem;
+  }
+
+  &__title {
+    padding-bottom: 2.5rem;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 1.6rem;
+
+    span {
+      color: var(--clr-primary-400);
+    }
+  }
+
+  &__link {
+    margin-top: 6rem;
+
+    @media (max-width: em(768)) {
+      margin-top: 3rem;
+    }
+  }
+}

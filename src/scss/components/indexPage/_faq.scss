@@ -1,0 +1,119 @@
+.faq {
+  &__title {
+    padding-bottom: 6rem;
+
+    @media (max-width: em(575)) {
+      padding-bottom: 3rem;
+    }
+  }
+
+  &__body {
+    margin-bottom: 4rem;
+  }
+
+  &__wrapper {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &.active {
+      .faq__question {
+        &::before {
+          height: 0;
+          transition: height var(--transition);
+        }
+      }
+
+      .faq__answer {
+        padding-top: 2.8rem;
+        padding-bottom: 2.8rem;
+        transition: max-height var(--transition), padding var(--transition);
+
+        @media (max-width: em(575)) {
+          padding-top: 1.8rem;
+          padding-bottom: 1.8rem;
+        }
+      }
+    }
+  }
+
+  &__question {
+    position: relative;
+    padding-top: 2.8rem;
+    padding-right: 8rem;
+    padding-bottom: 2.8rem;
+    padding-left: 2.5rem;
+    min-width: 100%;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: start;
+    color: var(--clr-default-100);
+    background-color: var(--clr-primary-600);
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      border-radius: 0.3rem;
+      background-color: var(--clr-primary-400);
+      transform: translateY(-50%);
+      transition: height var(--transition);
+    }
+
+    &::before {
+      right: 3.5rem;
+      width: 0.2rem;
+      height: 2rem;
+
+      @media (max-width: em(575)) {
+        right: 2.5rem;
+      }
+    }
+
+    &::after {
+      right: 2.6rem;
+      width: 2rem;
+      height: 0.2rem;
+
+      @media (max-width: em(575)) {
+        right: 1.6rem;
+      }
+    }
+
+    @media (max-width: em(575)) {
+      padding-top: 1.8rem;
+      padding-right: 5rem;
+      padding-bottom: 1.8rem;
+      padding-left: 1.5rem;
+    }
+  }
+
+  &__answer {
+    overflow: hidden;
+    padding-top: 0;
+    padding-right: 1rem;
+    padding-bottom: 0;
+    padding-left: 2.5rem;
+    max-height: 0;
+    box-sizing: content-box;
+    font-size: 1.8rem;
+    line-height: 150%;
+    transition: max-height var(--transition), padding var(--transition);
+
+    @media (max-width: em(575)) {
+      padding-left: 1.5rem;
+    }
+  }
+
+  &__table {
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    line-height: 145%;
+
+    a {
+      color: var(--clr-primary-400);
+    }
+  }
+}

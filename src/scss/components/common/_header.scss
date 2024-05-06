@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--clr-primary-100);
+  min-height: 9rem;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
